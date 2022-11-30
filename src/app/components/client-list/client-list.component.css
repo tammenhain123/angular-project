@@ -1,0 +1,62 @@
+.container{
+  margin: 62px 265px 0px 265px;
+}
+.title-page{
+  font-family: 'Koh Santepheap';
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--title-blue)
+}
+.line{
+  border: 3px solid #EEF3F7;
+  margin-bottom: 24px;
+}
+.client-name{
+  font-family: 'Koh Santepheap';
+  font-weight: 400;
+  font-size: 24px;
+}
+.input-client-name{
+  width: 96%;
+  height: 60px;
+  background-color: var(--light-gray-color);
+  font-size: 30px;
+  margin-bottom: 30px;
+  border: none;
+}
+.table-client{
+  width: 107%;
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+ 
+  border-spacing:0;
+}
+
+.table-header{
+  width: 100%;
+}
+
+.table-cell-header{
+  width: 25%;
+  border: 1px solid #77A7D4;
+}
+
+.icons{
+  display: flex;
+}
+.image{
+  margin-left: 10px;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.table-cell-body{
+  width: 25%;
+  opacity: 0.4;
+  border: 1px solid #77A7D4;
+}
+.input-client {
+  border: none;
+}

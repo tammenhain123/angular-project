@@ -1,0 +1,147 @@
+<div class="container">
+  <div>
+    <label class="input-text">Nome</label>
+    <input
+      [(ngModel)]="client.name"
+      placeholder="Digite seu nome"
+      class="input-form"
+    />
+  </div>
+  <div>
+    <label class="input-text">E-mail</label>
+    <input
+      [(ngModel)]="client.email"
+      placeholder="Digite seu melhor e-mail"
+      class="input-form"
+      mask="A*@A*.SSS"
+    />
+  </div>
+  <div>
+    <label class="input-text">CPF</label>
+    <input
+      [(ngModel)]="client.cpf"
+      placeholder="Digite CPF aqui"
+      class="input-form"
+      mask="000.000.000-00"
+    />
+  </div>
+  <div class="div-content">
+    <div class="separator space-rigth">
+      <label class="input-text">Endereço</label>
+      <input
+        [(ngModel)]="client.address"
+        placeholder="Digite endereço"
+        class="input-form"
+      />
+    </div>
+    <div class="separator">
+      <label class="input-text">Estado</label>
+      <input
+        [(ngModel)]="client.state"
+        placeholder="Selecione o Estado"
+        class="input-form"
+      />
+    </div>
+  </div>
+  <div class="div-content">
+    <div class="separator space-rigth">
+      <label class="input-text">CEP</label>
+      <input
+        [(ngModel)]="client.CEP"
+        placeholder="00.000-000"
+        mask="00.000-000"
+        class="input-form"
+      />
+    </div>
+    <div class="separator">
+      <label class="input-text">Cidade</label>
+      <input
+        [(ngModel)]="client.city"
+        placeholder="Selecione a Cidade"
+        class="input-form"
+      />
+    </div>
+  </div>
+
+  <span class="title-page">Forma de pagamento</span>
+  <hr class="line" />
+  <div class="radio-buttons">
+    <input
+      type="radio"
+      name="type"
+      value="card"
+      checked="paymentForm.type === 'card'"
+      (change)="changeType('card')"
+    />
+    <label for="type" class="input-text space-radio">Cartão crédito</label>
+    <input
+      type="radio"
+      name="type"
+      checked="paymentForm.type === 'bank'"
+      (change)="changeType('bank')"
+      value="bank"
+    />
+    <label for="type" class="input-text">Boleto</label>
+  </div>
+
+  <div class="div-content">
+    <div class="separator space-rigth">
+      <label class="input-text">Nome do cartão</label>
+      <input
+        [(ngModel)]="paymentForm.cardName"
+        placeholder="Nome impresso no cartão"
+        class="input-form"
+      />
+    </div>
+    <div class="separator">
+      <label class="input-text">Data Expedição</label>
+      <div class="div-content">
+        <select
+          [(ngModel)]="paymentForm.expeditionMonth"
+          placeholder="Mês"
+          class="input-form space-item"
+          mask="00"
+        >
+          <option *ngFor="let month of months" value="{{ month }}">
+            {{ month }}
+          </option>
+        </select>
+
+        <input
+          [(ngModel)]="paymentForm.expeditionYear"
+          placeholder="Ano"
+          class="input-form"
+          mask="00"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="div-content">
+    <div class="separator space-rigth">
+      <label class="input-text">Número do cartão</label>
+      <input
+        [(ngModel)]="paymentForm.cardNumber"
+        placeholder="0000 0000 0000 0000"
+        class="input-form"
+        mask="0000 0000 0000 0000"
+      />
+    </div>
+    <div class="separator">
+      <label class="input-text">Código de Segurança</label>
+      <input
+        [(ngModel)]="paymentForm.ccv"
+        placeholder="XXX"
+        mask="000"
+        class="input-form"
+      />
+    </div>
+  </div>
+  <div class="space-top">
+    <label class="input-text">Seu cartão será debitado em R$ 49,90</label>
+    <hr class="line" />
+    <button class="button-submit" (click)="save()">REALIZAR MATRÍCULA</button>
+    <br />
+    <label class="text-info">Informações seguras e criptografadas</label>
+  </div>
+</div>

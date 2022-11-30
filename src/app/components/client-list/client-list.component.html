@@ -1,0 +1,72 @@
+<div class="container">
+  <span class="title-page">Lista de Cliente</span>
+  <hr class="line" />
+  <div>
+    <span class="client-name">Nome do cliente</span>
+    <input
+      placeholder="Digite seu nome"
+      (blur)="searchClient($event)"
+      class="input-client-name"
+    />
+  </div>
+  <table class="table-client">
+    <tr class="table-header">
+      <th class="table-cell-header" *ngFor="let header of headers">
+        {{ header }}
+      </th>
+    </tr>
+    <tr *ngFor="let client of clients">
+      <th class="table-cell-header">{{ client.name }}</th>
+      <th class="table-cell-header">{{ client.email }}</th>
+      <th class="table-cell-header">{{ client.cpf }}</th>
+      <th class="table-cell-header">{{ client.createdAt }}</th>
+      <div class="icons">
+        <img
+          class="image"
+          [routerLink]="['/cadastro', client.id]"
+          src="../../assets/image/edit.png"
+        />
+        <img
+          (click)="delete(client.id)"
+          class="image"
+          src="../../assets/image/delete.png"
+        />
+      </div>
+    </tr>
+    <tr class="table-header">
+      <th class="table-cell-body">
+        <input
+          class="input-client"
+          [(ngModel)]="name"
+          placeholder="Exemplo de nome"
+        />
+      </th>
+      <th class="table-cell-body">
+        <input
+          type="text"
+          [(ngModel)]="email"
+          class="input-client"
+          mask="A*@A*.SSS"
+          placeholder="exemplo@email.com"
+        />
+      </th>
+      <th class="table-cell-body">
+        <input
+          [(ngModel)]="cpf"
+          class="input-client"
+          mask="000.000.000-00"
+          placeholder="000.000.000-00"
+        />
+      </th>
+      <th class="table-cell-body">
+        <input
+          [(ngModel)]="createdAt"
+          class="input-client"
+          mask="00/00/0000"
+          placeholder="00/00/0000"
+        />
+      </th>
+      <img (click)="add()" class="image" src="../../assets/image/plus.png" />
+    </tr>
+  </table>
+</div>

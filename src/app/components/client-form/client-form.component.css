@@ -1,0 +1,71 @@
+.container{
+  margin: 62px 265px 0px 265px;
+}
+.input-text{
+  font-family: 'Koh Santepheap';
+  font-weight: 400;
+  font-size: 24px;
+}
+.input-form{
+  width: 100%;
+  background-color: var(--light-gray-color);
+  font-size: 24px;
+  border: none;
+  margin-bottom: 20px;
+}
+.separator1{
+  width: 50%;
+}
+.separator2{
+  width: 25%;
+}
+.separator{
+  width: 50%;
+}
+.div-content{
+  display: flex;
+}
+.title-page{
+  margin-top: 20px;
+  font-family: 'Koh Santepheap';
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--title-blue)
+}
+.line{
+  border: 3px solid #EEF3F7;
+  margin-bottom: 24px;
+}
+.space-rigth {
+  padding-right: 20px;
+}
+.space-item{
+  margin-right: 20px;
+}
+.space-top{
+  margin-top: 30px;
+}
+.button-submit{
+  background: var(--title-blue);
+  border-radius: 12px;
+  width: 326px;
+  height: 58px;
+  border: none;
+  font-family: 'Koh Santepheap';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+.text-info{
+  font-family: 'Koh Santepheap';
+  font-weight: 400;
+  font-size: 14px;
+}
+.space-radio{
+  margin-right: 20%;
+}
+.radio-buttons{
+  margin: 30px 30px 30px 0px;
+}
